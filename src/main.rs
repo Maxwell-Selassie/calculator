@@ -1,4 +1,24 @@
 use std::io;
+fn main() {
+    println!("=== Interactive Calculator ===");
+    
+    let num1 = get_number("Enter first number:");
+    let num2 = get_number("Enter second number:");
+    let operation = get_operation();
+    
+    let result = calculate(num1, num2, &operation);
+    
+    let symbol = match operation.as_str() {
+        "1" => "+",
+        "2" => "-",
+        "3" => "*",
+        "4" => "/",
+        _ => "?",
+    };
+    
+    println!("\n{} {} {} = {}", num1, symbol, num2, result);
+}
+
 
 fn get_number(prompt: &str) -> f64 {
     println!("{}", prompt);
@@ -38,22 +58,3 @@ fn calculate(num1: f64, num2: f64, operation: &str) -> f64 {
     }
 }
 
-fn main() {
-    println!("=== Interactive Calculator ===");
-    
-    let num1 = get_number("Enter first number:");
-    let num2 = get_number("Enter second number:");
-    let operation = get_operation();
-    
-    let result = calculate(num1, num2, &operation);
-    
-    let symbol = match operation.as_str() {
-        "1" => "+",
-        "2" => "-",
-        "3" => "*",
-        "4" => "/",
-        _ => "?",
-    };
-    
-    println!("\n{} {} {} = {}", num1, symbol, num2, result);
-}
