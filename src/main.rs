@@ -1,9 +1,7 @@
-fn main() {
-    let mut s = String::from("hello");
+// fn main() {
+//     let word = "42";
+//     let number: u32 = word.trim().parse().expect("Input a number");
 
-    change(&mut s);
-}
+//     println!("Number multiplied by 2 is {}", &number * 2)
+// }
 
-fn change(some_string: &mut String) {
-    some_string.push_str(", world.");
-}
