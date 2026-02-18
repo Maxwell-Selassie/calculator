@@ -55,6 +55,11 @@ impl Task {
 }
 
 struct TaskList {
-    tasks:vec<Task>,
+    tasks:Vec<Task>,
 }
 
+impl TaskList {
+    fn new() -> Self {
+        Self {tasks: Vec::new()}
+    }
+}
