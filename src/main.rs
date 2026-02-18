@@ -55,6 +55,6 @@ impl Task {
 }
 
 struct TaskList {
-    tasks:vec<Task>
+    tasks:vec<Task>,
 }
 
